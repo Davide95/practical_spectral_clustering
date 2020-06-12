@@ -131,3 +131,5 @@ dmypy.json
 # Custom rules
 *.pdf
 neurips_2020.sty
+paper.synctex.gz
+appendices/Mall_Customers.csv
