@@ -49,7 +49,7 @@
 \section{Introduction}
 Spectral clustering identifies communities inside a graph.
 In Section \ref{section:twocom} we analyse how to extract communities in a noiseless scenario
-in which there is only one connected component identified as the only one community in the graph.
+in which there is only one connected component, identified as the only one community in the graph.
 Then, Section \ref{section:multiplecom} considers multiple connected components and
 Section \ref{section:noisecom} extends the previous ideas to a graph in which
 the number of clusters is greater than the number of connected components.
@@ -60,7 +60,7 @@ Note that every time we use the term "graph" we refer to undirected, weighted gr
 to avoid useless redundancy. All weights must be positive.
 
 The experiments are written in Python in the form of Jupyter Notebooks
-and they are provide together with this document as appendices.
+and they are provided together with this document as appendices.
 The name of the used libraries and their version are also supplied through a \path{requirements.txt} file.
 
 \section{Graphs with 1 connected component} \label{section:twocom}
@@ -114,7 +114,7 @@ minimization problem and a perfect solution for our task.
 
 We can observe in an empirical way what we have just proved.
 First, we generate a pre-defined number of graphs with one connected component.
-In particular, each graph is a Watts–Strogatz model \cite{wc} which has the desired propriety of having a not small clustering coefficient.
+In particular, each graph is a Watts–Strogatz model \cite{wc} which has the desired propriety of having a non-small clustering coefficient.
 Then, we produce a box plot of the values of each eigenvalue sorted in ascending order for each graph.
 The resulting plot can be seen in Figure \ref{figure:oneeigen}.
 
@@ -134,7 +134,7 @@ First, we rearrange the matrix $L$ grouping together nodes in the same connected
 In this way, $L$ is a block diagonal matrix with subgraphs $L_1, \dots, L_k$.
 Now, each subgraph has one and only one connected component
 and therefore it has one eigenvalue that is equal to zero,
-as demonstrated in Section \ref{section:twocom}.
+as proven in Section \ref{section:twocom}.
 
 We also know from linear algebra that the set of eigenvalues of $L$
 is composed of the eigenvalues of $L_1, \dots, L_k$.
@@ -161,8 +161,8 @@ Since in this scenario the eigenspace of the eigenvalues with value zero
 is a linear combination of indicator vectors, we use them to identify the connected components.
 In particular, we build a matrix $V \in \mathit{R}^{n \times k}$ where each column corresponds to
 an eigenvector of the previous eigenspace.
-Finally, K-means is performed over the matrix $V$ to group data due to the fact that groups in $V$
-are linearly separable.
+Finally, K-means is performed over the matrix $V$ to group data,
+since groups in $V$ are linearly separable.
 
 In order to see if the eigenvectors described before are good indicator vectors,
 we build a graph with three connected components:
@@ -207,7 +207,7 @@ can be justified in other ways, well documented in \cite{DBLP:journals/corr/abs-
 
 To empirically verify the quality of using the eigengap to identify the number of clusters,
 we start from a graph composed of three connected components which are complete graphs themselves and
-we add iteratively more edges until all nodes are connected to everyone else.
+we add iteratively more edges until all nodes are connected to all the others.
 As we can see from Figure \ref{figure:addingnoise}:
 \begin{itemize}
     \item The smallest eigenvalue is zero all the time since there is always at least one connected component in a graph.
