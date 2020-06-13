@@ -97,7 +97,19 @@
     \item $s(x_i, x_j) = \frac{1}{\sqrt{2}} \sqrt{\sum_k (\sqrt{x_i(k)} - \sqrt{x_j(k)})^2}$ (Hellinger distance)
     \item \dots
   \end{itemize}
+\end{frame}
 
+\begin{frame}
+  \frametitle{Why not K-means?}
+  \begin{figure}[ht]
+    \hfill
+    \subfigure[Ground truth]{\includegraphics[width=0.3\linewidth]{figures/ground-truth.eps}}%
+    \hfill
+    \subfigure[Clustering using K-means]{\includegraphics[width=0.3\linewidth]{figures/kmeans.eps}}%
+    \hfill
+    \subfigure[Clustering using spectral clustering]{\includegraphics[width=0.3\linewidth]{figures/spectral-on-comparison.eps}}%
+
+  \end{figure}
 \end{frame}
 
 \begin{frame}
